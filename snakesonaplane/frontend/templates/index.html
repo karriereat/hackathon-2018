@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Snake App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+    <link rel="stylesheet" href="../static/assets/style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+</head>
+<body>
+<div class="container">
+    <div class="columns">
+        <div class="column is-three-fifths is-offset-one-fifth">
+            <header class="header">
+                <section class="hero">
+                    <div class="hero-body">
+                        <div class="container">
+                            <h1 class="title headline">
+                                Hello from Snake Team
+                            </h1>
+                            <h2 class="subtitle headline">
+                                Python is awesome ... kind of ... well, basically it's not
+                            </h2>
+                        </div>
+                    </div>
+                </section>
+            </header>
+            <form action="/result" method="POST" enctype="multipart/form-data">
+                <div class="field">
+                    <label class="label">Image weburl</label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="URL... " name="fileurl">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Fileupload</label>
+                    <div class="file has-name is-fullwidth is-right">
+                        <label class="file-label">
+                            <input class="file-input" type="file" name="file" id="file">
+                            <span class="file-cta">
+                                <span class="file-icon"><i class="fas fa-upload"></i></span>
+                                <span class="file-label">Choose a file…</span>
+                            </span>
+                            <span class="file-name" id="filename">File</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="field is-grouped">
+                    <div class="control">
+                        <button class="button is-link" type="submit">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    var file = document.getElementById("file");
+    file.onchange = function () {
+        if (file.files.length > 0) {
+
+            document.getElementById('filename').innerHTML = file.files[0].name;
+
+        }
+    };
+</script>
+</body>
+</html>

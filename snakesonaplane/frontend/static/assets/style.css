@@ -1,0 +1,10 @@
+
+.header {
+    background-image: url("net.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.headline {
+    color: white;
+}

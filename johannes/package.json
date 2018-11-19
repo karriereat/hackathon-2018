@@ -1,0 +1,25 @@
+{
+  "name": "johannes",
+  "version": "1.0.0",
+  "description": "Collaborative Real-Time Presentation Software (karriere.at Hackathon 2018)",
+  "main": "index.js",
+  "scripts": {
+    "build": "NODE_ENV=production parcel build src/index.html -d public",
+    "watch": "parcel watch src/index.html -d public",
+    "serve": "parcel serve src/index.html -d public"
+  },
+  "author": "Manuel Wieser <manuel.wieser@karriere.at>",
+  "contributors": [
+    "Markus Oberlehner <markus.oberlehner@karriere.at>",
+    "Hristo Hapitski <hristo.hapitski@karriere.at>"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "firebase": "^5.5.8",
+    "firebase-admin": "^6.1.0",
+    "parcel-bundler": "^1.10.3",
+    "preact": "^8.3.1",
+    "preact-compat": "^3.18.4",
+    "typescript": "^3.1.6"
+  }
+}
