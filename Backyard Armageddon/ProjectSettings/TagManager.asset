@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Exit
+  - Box
+  - Food
+  - Enemy
+  - Health
+  - Life
+  - Water
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Blocking
+  - Background
+  - Enemy
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Background
+    uniqueID: 1705829547
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Floor1
+    uniqueID: 867768807
+    locked: 0
+  - name: Items
+    uniqueID: 3529055515
+    locked: 0
+  - name: Player
+    uniqueID: 3387589955
+    locked: 0
