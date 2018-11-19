@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "outDir": "public",
+    "jsx": "react",
+    "jsxFactory": "h"
+  },
+  "include": [
+    "src/**/*"
+  ]
+}
