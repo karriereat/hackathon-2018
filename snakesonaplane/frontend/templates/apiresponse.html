@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Snake App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+    <link rel="stylesheet" href="../static/assets/style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <link rel="stylesheet" href="../static/assets/odometer.css" />
+    <script src="../static/assets/odometer.min.js"></script>
+    <style type="text/css">
+        .card .card-content p.subtitle {
+            font-weight: bold;
+        }
+    </style>
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function(e) {
+        if (document.getElementsByClassName("modal-close").length) {
+            document.getElementsByClassName("modal-close")[0].addEventListener('click', function() {
+            document.getElementsByClassName('modal')[0].classList.remove('is-active');
+            }, false);
+    }});
+
+</script>
+</head>
+<body>
+<div class="container">
+    <div class="columns">
+        <div class="column is-three-fifths is-offset-one-fifth">
+            <header class="header">
+                <section class="hero">
+                    <div class="hero-body">
+                        <div class="container">
+                            <h1 class="title headline">
+                                Hello from Snake Team
+                            </h1>
+                            <h2 class="subtitle headline">
+                                Python is awesome ... kind of ... well, basically it's not
+                            </h2>
+                        </div>
+                    </div>
+                </section>
+            </header>
+            {% if response.meta %}
+                {% if response.meta.fichtl == "true" %}
+                    <div class="modal is-active">
+                      <div class="modal-background"></div>
+                      <div class="modal-content">
+                        <p class="image">
+                          <img src="../static/assets/fichtl.gif" alt="">
+                        </p>
+                      </div>
+                      <button class="modal-close is-large" aria-label="close"></button>
+                    </div>
+                {% endif %}
+            {% endif %}
+            {% if response.error %}
+                <article class="message is-danger">
+                    <div class="message-header">
+                        <p>An error occured:</p>
+                    </div>
+                    <div class="message-body">
+                        {{ response.error }}
+                    </div>
+                </article>
+            {% endif %}
+            {% if response.data %}
+                {% for imageclassification in response.data %}
+                    <div class="card">
+                        <div class="card-content">
+                            <p class="subtitle">{{ imageclassification.attributes.keywords|join(', ') }}</p>
+                            Score: <span>{{ imageclassification.attributes.score }}</span>
+                            <!--Score: <span class="odometer odometer-theme-minimal">{{ imageclassification.attributes.score }}</span>-->
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+</div>
+</body>
+</html>
