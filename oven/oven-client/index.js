@@ -32,7 +32,7 @@ export default class App extends Component {
             route('/', true);
         }
 
-        this.lobbySocket = new Sockette('ws://DEV47.local:9090', {
+        this.lobbySocket = new Sockette('ws://localhost:9090', {
             timeout: 5e3,
             maxAttempts: 10,
             onopen: this.onLobbyOpen,

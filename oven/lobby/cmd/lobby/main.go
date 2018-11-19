@@ -136,7 +136,7 @@ func initGames() {
 		Enabled:    true,
 		MinPlayers: 2,
 		MaxPlayers: 5,
-		host:       "DEV62.local",
+		host:       "localhost",
 		port:       8888,
 	}
 	games["TicTacToe"] = &Game{
@@ -144,7 +144,7 @@ func initGames() {
 		Enabled:    true,
 		MinPlayers: 2,
 		MaxPlayers: 2,
-		host:       "DEV64.local",
+		host:       "localhost",
 		port:       1234,
 	}
 	games["PaperScissorRock"] = &Game{
@@ -152,7 +152,7 @@ func initGames() {
 		Enabled:    false,
 		MinPlayers: 2,
 		MaxPlayers: 2,
-		host:       "DEV62.local",
+		host:       "localhost",
 		port:       8888,
 	}
 }
