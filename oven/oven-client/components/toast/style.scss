@@ -1,0 +1,23 @@
+.toast {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    background-color: white;
+    padding: 0.5rem;
+    z-index: 1000;
+
+    transform: translateX(-50%);
+
+    &--info {
+        background-color: #81D4FA;
+    }
+
+    &--success {
+        background-color: #66BB6A;
+    }
+
+    &--error {
+        background-color: #E53935;
+        color: #fff;
+    }
+}

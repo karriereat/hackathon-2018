@@ -1,0 +1,101 @@
+@import '../../scss/variables';
+
+.lobby {
+
+    &__createGame {
+        background-color: $blue-600;
+        border-radius: 3px;
+        font-size: 1rem;
+        color: #fff;
+        border-color: $blue-600;
+        min-height: 35px;
+        cursor: pointer;
+    }
+
+    &__loginInput, &__lobbyNameInput {
+        margin-top: 0.5rem;
+        width: 100%;
+        font-size: 1rem;
+        border: 1px solid $gray-300;
+    }
+
+    &__subHeader {
+        background-color: $gray-300;
+        padding: 1rem;
+        font-size: 1.2rem;
+        color: #263238;
+    }
+
+    &__list {
+        width: 100%;
+
+        margin: 0;
+        padding: 0;
+        background-color: $gray-100;
+    }
+
+    &__listItem {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid $gray-400;
+
+        &:first-child {
+            border-top: 1px solid $gray-400;
+        }
+    }
+
+    &__name {
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    &__info {
+        margin-top: 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    &__gameMeta {
+        flex-grow: 1;
+        margin: 1rem;
+    }
+
+    &__gameActions {
+        display: flex;
+        align-items: center;
+        margin-right: 1rem;
+    }
+
+    &__gameStatus {
+        svg {
+            width: 20px;
+            height: 20px;
+            color: $gray-900;
+        }
+    }
+
+    &__gameIcon {
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        margin-left: 1rem;
+    }
+
+    &__gameJoin, &__gameNew {
+        margin-left: 1rem;
+        border-radius: 3px;
+        background-color:$green-700;
+        color: $white;
+        font-weight: 500;
+        font-size: 1rem;
+        padding: 1rem 2rem;
+
+        &:disabled {
+            background: $gray-300;
+        }
+    }
+
+    &__players {
+        text-align: center;
+    }
+}

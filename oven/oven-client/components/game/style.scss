@@ -1,0 +1,23 @@
+@import '../../scss/variables';
+
+.game {
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background-color: $gray-900;
+        color: $gray-100;
+        padding: 1rem;
+
+        h1 {
+            margin: 0;
+            font-weight: 200;
+        }
+    }
+
+    &__gameIcon {
+        margin: 1rem;
+        border-radius: 50%;
+    }
+}

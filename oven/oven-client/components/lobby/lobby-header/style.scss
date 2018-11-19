@@ -1,0 +1,27 @@
+@import '../../../scss/variables';
+
+.lobbyHeader {
+    display: flex;
+    align-items: center;
+
+    background-color: $gray-900;
+    color: $gray-100;
+    padding: 1rem;
+
+    h1 {
+        margin: 0;
+        font-weight: 200;
+        flex-grow: 1;
+        text-align: left;
+    }
+
+    &__login {
+        background-color: $blue-600;
+        border-radius: 3px;
+        font-size: 1rem;
+        color: #fff;
+        border-color: $blue-600;
+        min-height: 35px;
+        cursor: pointer;
+    }
+}
