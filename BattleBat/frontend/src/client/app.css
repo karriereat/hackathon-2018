@@ -1,0 +1,22 @@
+h1 {
+  color: green;
+}
+
+body {
+  text-align: center;
+  margin: auto;
+}
+
+.Sidebar-toolbarIcon-6 {
+  background-image: url("/resources/battle_bat_header.png");
+  background-size: 240px 65px;
+}
+
+.Sidebar-toolbarIcon-6 button {
+  background-color: #eeeeee;
+  padding:3px;
+}
+
+.Sidebar-toolbarIcon-6 button:hover {
+  background-color: #aaaaaa;
+}

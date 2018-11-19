@@ -1,0 +1,25 @@
+server:
+  port: 1234
+
+logging:
+  pattern:
+    console: "%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(%-5level){green} %clr(%-36logger{36}){cyan} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %-36logger{36} - %msg%n"
+  level:
+    at.karriere: info
+    org.springframework: info
+
+spring:
+  jpa:
+    open-in-view: true
+  http:
+    encoding:
+      charset: utf-8
+  messages:
+    encoding: utf-8
+    fallback-to-system-locale: false
+  output:
+    ansi:
+      enabled: always
+  jmx:
+    enabled: true

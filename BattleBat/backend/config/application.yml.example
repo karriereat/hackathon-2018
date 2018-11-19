@@ -1,0 +1,8 @@
+# this yml overrides all not profile specific settings
+
+proposals:
+  amount: 4
+  amount-random: 5
+  min-active: 1
+  max-related-keywords-of-synonyms-and-similars: 30
+  fallback-keyword-base-amount: 50

@@ -1,0 +1,68 @@
+buildscript {
+    ext {
+        springBootVersion = '2.1.0.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+apply plugin: 'groovy'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+group = 'at.karriere.battlebat'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+
+dependencies {
+    compileOnly 'org.springframework.boot:spring-boot-configuration-processor'
+
+    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+
+    runtime 'org.springframework.boot:spring-boot-devtools'
+    runtime 'mysql:mysql-connector-java'
+
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-json'
+    // implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    // implementation 'org.springframework.boot:spring-boot-starter-data-rest'
+
+    implementation 'org.codehaus.groovy:groovy'
+
+    // https://mvnrepository.com/artifact/org.codehaus.groovy/groovy-sql
+    implementation group: 'org.codehaus.groovy', name: 'groovy-sql', version: '2.5.2'
+
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+jar {
+    baseName = 'battlebat'
+    version = ''
+}
+
+bootJar {
+    baseName = 'battlebat'
+    version = ''
+    launchScript {
+        properties(
+                initInfoProvides: 'battlebat',
+                initInfoShortDescription: 'battlebat',
+                initInfoDescription: 'battlebat'
+        )
+    }
+}
+
+springBoot {
+    buildInfo()
+}
